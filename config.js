@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const replacementLink = document.getElementById("replacementLink");
   
     chrome.storage.sync.get(["replacementText", "replacementLink"], (config) => {
-      replacementText.value = config.replacementText || "[Don't remind me]";
-      replacementLink.value = config.replacementLink || "https://pastebin.com/raw/QW7fubvU";
+      replacementText.value = config.replacementText || "[ Goodbye TikTok :( ]";
+      replacementLink.value = config.replacementLink || "https://raw.githubusercontent.com/gabrielzv1233/TikTok-Link-replacer/refs/heads/main/examplelink.txt";
     });
   
     form.addEventListener("submit", (e) => {
