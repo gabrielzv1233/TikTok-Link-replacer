@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input,
+    button {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Configuration</h1>
+  <form id="configForm">
+    <label for="replacementText">Replacement Text:</label>
+    <input type="text" id="replacementText" placeholder="[Don't remind me]" required />
+
+    <label for="replacementLink">Replacement Link:</label>
+    <input
+      type="text"
+      id="replacementLink"
+      placeholder="https://pastebin.com/raw/QW7fubvU"
+      required
+    />
+
+    <button type="submit">Save</button>
+  </form>
+  <div class="guide">
+    <h2>Variable Guide</h2>
+    <p>Use the following variables in your replacement text or link template:</p>
+    <ul>
+      <li><code>{link}</code>: The full original TikTok link.</li>
+      <li><code>{query}</code>: The query string (e.g., <code>?lang=en</code>).</li>
+      <li><code>{creator}</code>: The creator's username (e.g., <code>gabrielzv1233</code>, If link is to a tag, it may get the tag instead).</li>
+      <li><code>{video}</code>: The video ID (e.g., <code>7041397012427836678</code>).</li>
+      <li><code>{content}</code>: The original text of the <code>&lt;a&gt;</code> element.</li>
+    </ul>
+    <p><strong>Error Handling:</strong></p>
+    <ul>
+      <li><code>err::500</code>: A critical error occurred/element not found.</li>
+    </ul>
+  </div>
+<p>
+    This was not made with much quality so give it a break if it breaks
+</p>
+  <script src="config.js"></script>
+</body>
+</html>
